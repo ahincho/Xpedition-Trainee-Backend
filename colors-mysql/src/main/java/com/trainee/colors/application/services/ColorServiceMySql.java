@@ -1,6 +1,8 @@
 package com.trainee.colors.application.services;
 
 import com.trainee.colors.domain.entities.Color;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
@@ -17,8 +19,8 @@ public class ColorServiceMySql implements ColorService {
     ColorRepository colorRepository;
 
     @Override
-    public List<Color> findAll() {
-        return this.colorRepository.findAll();
+    public Page<Color> findAll(Pageable pageable) {
+        return this.colorRepository.findAll(pageable);
     }
 
     @Override

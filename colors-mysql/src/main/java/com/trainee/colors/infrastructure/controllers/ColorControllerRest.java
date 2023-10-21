@@ -1,8 +1,11 @@
 package com.trainee.colors.infrastructure.controllers;
 
 import com.trainee.colors.domain.dtos.ColorRequest;
+import com.trainee.colors.domain.dtos.ColorResponse;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,9 +22,9 @@ public class ColorControllerRest implements ColorController {
     ColorService colorService;
 
     @Override
-    @GetMapping(produces = "application/json")
-    public List<Color> findAll() {
-        return this.colorService.findAll();
+    @GetMapping
+    public Page<ColorResponse> findAll(Pageable pageable) {
+        return this.colorService.findAll(pageable).map(ColorResponse::new);
     }
 
     @Override

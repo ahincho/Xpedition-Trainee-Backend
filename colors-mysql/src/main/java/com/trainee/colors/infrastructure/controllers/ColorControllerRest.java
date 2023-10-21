@@ -1,6 +1,9 @@
 package com.trainee.colors.infrastructure.controllers;
 
+import com.trainee.colors.domain.dtos.ColorRequest;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +19,7 @@ public class ColorControllerRest implements ColorController {
     ColorService colorService;
 
     @Override
-    @GetMapping
+    @GetMapping(produces = "application/json")
     public List<Color> findAll() {
         return this.colorService.findAll();
     }
@@ -29,8 +32,8 @@ public class ColorControllerRest implements ColorController {
 
     @Override
     @PostMapping
-    public Color save(@RequestBody Color color) {
-        return this.colorService.saveColor(color);
+    public Color save(@RequestBody @Valid ColorRequest color) {
+        return this.colorService.saveColor(mapColorRequestToColor(color));
     }
 
     @Override
@@ -43,6 +46,14 @@ public class ColorControllerRest implements ColorController {
     @DeleteMapping("/{id}")
     public Color delete(@PathVariable("id") Long id) {
         return this.colorService.deleteColor(id);
+    }
+
+    private static Color mapColorRequestToColor(ColorRequest colorRequest) {
+        return Color.builder()
+                .name(colorRequest.name())
+                .color(colorRequest.color())
+                .pantone(colorRequest.pantone())
+                .build();
     }
 
 }

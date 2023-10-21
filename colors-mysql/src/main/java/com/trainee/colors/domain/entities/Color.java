@@ -1,16 +1,17 @@
 package com.trainee.colors.domain.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
 
-@Entity
 @Table(name = "colors")
-@Getter @Setter
+@Entity(name = "color")
+@Getter @Setter @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Color {
 
     @Id

@@ -1,26 +1,46 @@
 package com.trainee.colors.application.services;
 
+import com.trainee.colors.domain.dtos.ColorListResponse;
+import com.trainee.colors.domain.dtos.ColorResponse;
 import com.trainee.colors.domain.entities.Color;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-
-import lombok.AllArgsConstructor;
-
 import com.trainee.colors.domain.repositories.ColorRepository;
 
 import java.util.List;
 import java.util.Optional;
 
+import jakarta.transaction.Transactional;
+
+import lombok.AllArgsConstructor;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
+
 @Service
 @AllArgsConstructor
 public class ColorServiceMySql implements ColorService {
 
-    ColorRepository colorRepository;
+    private final ColorRepository colorRepository;
+
+    private final String endpointPathPage = "/api/colors?page=";
 
     @Override
-    public Page<Color> findAll(Pageable pageable) {
-        return this.colorRepository.findAll(pageable);
+    public ColorListResponse findAll(Pageable pageable) {
+        pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("createdOn", "lastUpdatedOn").descending());
+        Page<Color> colorPage = this.colorRepository.findAll(pageable);
+        List<ColorResponse> colorResponses = colorPage.stream().map(ColorResponse::new).toList();
+        ColorListResponse colorListResponse = new ColorListResponse();
+        colorListResponse.setColors(colorResponses);
+        colorListResponse.setPages(colorPage.getTotalPages());
+        if (colorPage.hasNext()) {
+            colorListResponse.setNextPage(endpointPathPage + (pageable.getPageNumber() + 1));
+        }
+        if (colorPage.hasPrevious()) {
+            colorListResponse.setPreviousPage(endpointPathPage + (pageable.getPageNumber() - 1));
+        }
+        return colorListResponse;
     }
 
     @Override
@@ -29,11 +49,13 @@ public class ColorServiceMySql implements ColorService {
     }
 
     @Override
+    @Transactional
     public Color saveColor(Color color) {
         return this.colorRepository.save(color);
     }
 
     @Override
+    @Transactional
     public Color updateColor(Long id, Color color) {
         Optional<Color> existingColor = this.colorRepository.findById(id);
         if (existingColor.isEmpty()) {
@@ -47,6 +69,7 @@ public class ColorServiceMySql implements ColorService {
     }
 
     @Override
+    @Transactional
     public Color deleteColor(Long id) {
         Optional<Color> existingColor = this.colorRepository.findById(id);
         if (existingColor.isEmpty()) {

@@ -31,19 +31,8 @@ public class ColorControllerRest implements ColorController {
     @Override
     @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     public ResponseEntity<ColorListResponse> findAll(@PageableDefault(size = 9) Pageable pageable) {
-        pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("createdOn", "lastUpdatedOn").descending());
-        Page<Color> colorPage = colorService.findAll(pageable);
-        List<ColorResponse> colorResponses = colorPage.stream().map(ColorResponse::new).toList();
-        ColorListResponse response = new ColorListResponse();
-        response.setColors(colorResponses);
-        response.setPages(colorPage.getTotalPages());
-        if (colorPage.hasNext()) {
-            response.setNextPage("/api/colors?page=" + (pageable.getPageNumber() + 1));
-        }
-        if (colorPage.hasPrevious()) {
-            response.setPreviousPage("/api/colors?page=" + (pageable.getPageNumber() - 1));
-        }
-        return ResponseEntity.ok(response);
+        ColorListResponse colorListResponse = this.colorService.findAll(pageable);
+        return ResponseEntity.ok(colorListResponse);
     }
 
     @Override

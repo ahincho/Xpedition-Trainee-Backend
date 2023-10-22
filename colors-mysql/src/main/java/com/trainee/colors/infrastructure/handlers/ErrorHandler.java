@@ -1,4 +1,4 @@
-package com.trainee.colors.infrastructure.errors;
+package com.trainee.colors.infrastructure.handlers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -9,11 +9,15 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ErrorHandler {
 
+    // Using Aspect Oriented Programming
+
+    // HTTP Status 404 : Not Found (Null Pointer)
     @ExceptionHandler(NullPointerException.class)
     public ResponseEntity notFound() {
         return ResponseEntity.notFound().build();
     }
 
+    // HTTP Status 400 : Bad Request (When Validation doesnt Match)
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity notValid(MethodArgumentNotValidException notValidException) {
         var errors = notValidException.getFieldErrors().stream().map(NotValidField::new).toList();

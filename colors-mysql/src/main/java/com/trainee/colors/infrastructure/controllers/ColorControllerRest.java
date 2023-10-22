@@ -10,6 +10,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,7 +29,7 @@ public class ColorControllerRest implements ColorController {
     ColorService colorService;
 
     @Override
-    @GetMapping
+    @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     public ResponseEntity<ColorListResponse> findAll(@PageableDefault(size = 9) Pageable pageable) {
         pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("createdOn", "lastUpdatedOn").descending());
         Page<Color> colorPage = colorService.findAll(pageable);
@@ -50,7 +51,6 @@ public class ColorControllerRest implements ColorController {
     public ResponseEntity<ColorResponse> findById(@PathVariable("id") Long id) {
         // Found Color 200 Ok
         Color color = this.colorService.findById(id);
-
         return ResponseEntity.ok(new ColorResponse(color));
     }
 

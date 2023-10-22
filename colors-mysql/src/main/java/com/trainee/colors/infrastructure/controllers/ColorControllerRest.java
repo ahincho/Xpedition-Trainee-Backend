@@ -1,15 +1,20 @@
 package com.trainee.colors.infrastructure.controllers;
 
+import com.trainee.colors.domain.dtos.ColorListResponse;
 import com.trainee.colors.domain.dtos.ColorRequest;
 import com.trainee.colors.domain.dtos.ColorResponse;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.trainee.colors.application.services.ColorService;
 import com.trainee.colors.domain.entities.Color;
@@ -23,8 +28,20 @@ public class ColorControllerRest implements ColorController {
 
     @Override
     @GetMapping
-    public Page<ColorResponse> findAll(Pageable pageable) {
-        return this.colorService.findAll(pageable).map(ColorResponse::new);
+    public ColorListResponse findAll(@PageableDefault(size = 10) Pageable pageable) {
+        pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("createdOn", "lastUpdatedOn").ascending());
+        Page<Color> colorPage = colorService.findAll(pageable);
+        List<ColorResponse> colorResponses = colorPage.stream().map(ColorResponse::new).toList();
+        ColorListResponse response = new ColorListResponse();
+        response.setColors(colorResponses);
+        response.setPages(colorPage.getTotalPages());
+        if (colorPage.hasNext()) {
+            response.setNextPage("/api/colors?page=" + (pageable.getPageNumber() + 1));
+        }
+        if (colorPage.hasPrevious()) {
+            response.setPreviousPage("/api/colors?page=" + (pageable.getPageNumber() - 1));
+        }
+        return response;
     }
 
     @Override

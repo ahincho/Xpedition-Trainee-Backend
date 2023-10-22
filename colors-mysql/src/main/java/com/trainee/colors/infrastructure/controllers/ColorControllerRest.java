@@ -1,24 +1,22 @@
 package com.trainee.colors.infrastructure.controllers;
 
+import com.trainee.colors.application.services.ColorService;
 import com.trainee.colors.domain.dtos.ColorListResponse;
 import com.trainee.colors.domain.dtos.ColorRequest;
 import com.trainee.colors.domain.dtos.ColorResponse;
+import com.trainee.colors.domain.entities.Color;
+
 import jakarta.validation.Valid;
+
+import java.net.URI;
+
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
+
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.net.URI;
-import java.util.List;
-
-import com.trainee.colors.application.services.ColorService;
-import com.trainee.colors.domain.entities.Color;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
@@ -26,7 +24,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 @RequestMapping("/api/colors")
 public class ColorControllerRest implements ColorController {
 
-    ColorService colorService;
+    private final ColorService colorService;
 
     @Override
     @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
@@ -36,7 +34,7 @@ public class ColorControllerRest implements ColorController {
     }
 
     @Override
-    @GetMapping("/{id}")
+    @GetMapping(value = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     public ResponseEntity<ColorResponse> findById(@PathVariable("id") Long id) {
         // Found Color 200 Ok
         Color color = this.colorService.findById(id);
@@ -44,7 +42,7 @@ public class ColorControllerRest implements ColorController {
     }
 
     @Override
-    @PostMapping
+    @PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     public ResponseEntity<ColorResponse> save(@RequestBody @Valid ColorRequest color, UriComponentsBuilder uriComponentsBuilder) {
         // Return 201 Created
         Color created = this.colorService.saveColor(mapColorRequestToColor(color));
@@ -53,13 +51,13 @@ public class ColorControllerRest implements ColorController {
     }
 
     @Override
-    @PutMapping("/{id}")
+    @PutMapping(value = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     public Color update(@PathVariable("id") Long id, @RequestBody Color color) {
         return this.colorService.updateColor(id, color);
     }
 
     @Override
-    @DeleteMapping("/{id}")
+    @DeleteMapping(value = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
     public Color delete(@PathVariable("id") Long id) {
         return this.colorService.deleteColor(id);
     }

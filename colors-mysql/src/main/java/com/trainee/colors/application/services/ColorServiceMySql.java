@@ -5,10 +5,10 @@ import com.trainee.colors.domain.dtos.ColorResponse;
 import com.trainee.colors.domain.entities.Color;
 import com.trainee.colors.domain.repositories.ColorRepository;
 
+import jakarta.transaction.Transactional;
+
 import java.util.List;
 import java.util.Optional;
-
-import jakarta.transaction.Transactional;
 
 import lombok.AllArgsConstructor;
 
@@ -24,8 +24,6 @@ public class ColorServiceMySql implements ColorService {
 
     private final ColorRepository colorRepository;
 
-    private final String endpointPathPage = "/api/colors?page=";
-
     @Override
     public ColorListResponse findAll(Pageable pageable) {
         pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("createdOn", "lastUpdatedOn").descending());
@@ -34,6 +32,7 @@ public class ColorServiceMySql implements ColorService {
         ColorListResponse colorListResponse = new ColorListResponse();
         colorListResponse.setColors(colorResponses);
         colorListResponse.setPages(colorPage.getTotalPages());
+        String endpointPathPage = "/api/colors?page=";
         if (colorPage.hasNext()) {
             colorListResponse.setNextPage(endpointPathPage + (pageable.getPageNumber() + 1));
         }

@@ -6,10 +6,10 @@ import jakarta.validation.constraints.Pattern;
 public record ColorRequest (
         @NotBlank String name,
         @NotBlank
-        @Pattern(regexp = "#\\d{6}")
+        @Pattern(regexp = "^#[A-F0-9]{6}$")
         String color,
         @NotBlank
-        @Pattern(regexp = "\\d{2}-\\d{4}")
+        @Pattern(regexp = "^[0-9]{2}-[0-9]{4}$")
         String pantone
 ) {
 

@@ -5,7 +5,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Table(name = "colors")
 @Entity(name = "color")
@@ -21,8 +21,8 @@ public class Color {
     private String color;
     private String pantone;
     @CreationTimestamp
-    private Instant createdOn;
+    private LocalDateTime createdOn;
     @UpdateTimestamp
-    private Instant lastUpdatedOn;
+    private LocalDateTime lastUpdatedOn;
 
 }

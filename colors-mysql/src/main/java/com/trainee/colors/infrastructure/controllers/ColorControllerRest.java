@@ -10,11 +10,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.trainee.colors.application.services.ColorService;
 import com.trainee.colors.domain.entities.Color;
@@ -28,8 +25,8 @@ public class ColorControllerRest implements ColorController {
 
     @Override
     @GetMapping
-    public ColorListResponse findAll(@PageableDefault(size = 10) Pageable pageable) {
-        pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("createdOn", "lastUpdatedOn").ascending());
+    public ColorListResponse findAll(@PageableDefault(size = 9) Pageable pageable) {
+        pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("createdOn", "lastUpdatedOn").descending());
         Page<Color> colorPage = colorService.findAll(pageable);
         List<ColorResponse> colorResponses = colorPage.stream().map(ColorResponse::new).toList();
         ColorListResponse response = new ColorListResponse();

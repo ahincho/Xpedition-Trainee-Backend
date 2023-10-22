@@ -10,11 +10,15 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.net.URI;
 import java.util.List;
 
 import com.trainee.colors.application.services.ColorService;
 import com.trainee.colors.domain.entities.Color;
+import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @AllArgsConstructor
@@ -25,7 +29,7 @@ public class ColorControllerRest implements ColorController {
 
     @Override
     @GetMapping
-    public ColorListResponse findAll(@PageableDefault(size = 9) Pageable pageable) {
+    public ResponseEntity<ColorListResponse> findAll(@PageableDefault(size = 9) Pageable pageable) {
         pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("createdOn", "lastUpdatedOn").descending());
         Page<Color> colorPage = colorService.findAll(pageable);
         List<ColorResponse> colorResponses = colorPage.stream().map(ColorResponse::new).toList();
@@ -38,19 +42,25 @@ public class ColorControllerRest implements ColorController {
         if (colorPage.hasPrevious()) {
             response.setPreviousPage("/api/colors?page=" + (pageable.getPageNumber() - 1));
         }
-        return response;
+        return ResponseEntity.ok(response);
     }
 
     @Override
     @GetMapping("/{id}")
-    public Color findById(@PathVariable("id") Long id) {
-        return this.colorService.findById(id);
+    public ResponseEntity<ColorResponse> findById(@PathVariable("id") Long id) {
+        // Found Color 200 Ok
+        Color color = this.colorService.findById(id);
+
+        return ResponseEntity.ok(new ColorResponse(color));
     }
 
     @Override
     @PostMapping
-    public Color save(@RequestBody @Valid ColorRequest color) {
-        return this.colorService.saveColor(mapColorRequestToColor(color));
+    public ResponseEntity<ColorResponse> save(@RequestBody @Valid ColorRequest color, UriComponentsBuilder uriComponentsBuilder) {
+        // Return 201 Created
+        Color created = this.colorService.saveColor(mapColorRequestToColor(color));
+        URI uri = uriComponentsBuilder.path("/api/colors/{id}").buildAndExpand(created.getId()).toUri();
+        return ResponseEntity.created(uri).body(new ColorResponse(created));
     }
 
     @Override

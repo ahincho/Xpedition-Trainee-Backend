@@ -2,7 +2,7 @@
 # > mvn clean
 # > mvn package
 # Run this Command on Terminal to Create the Docker Image
-# > docker build -t springboot-colors:1.0 .
+# > docker build -t springboot-colors:1.1 .
 FROM amazoncorretto:17.0.8-alpine
 VOLUME /tmp
 EXPOSE 8080

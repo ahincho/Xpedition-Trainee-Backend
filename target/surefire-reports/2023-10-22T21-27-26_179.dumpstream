@@ -1,4 +1,4 @@
-# Created at 2023-10-22T21:23:02.211
+# Created at 2023-10-22T21:27:26.344
 Boot Manifest-JAR contains absolute paths in classpath 'D:\Xpedition-Trainee-Backend\colors-mysql\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root

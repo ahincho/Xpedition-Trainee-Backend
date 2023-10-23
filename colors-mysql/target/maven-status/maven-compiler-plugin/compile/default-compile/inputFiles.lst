@@ -1,0 +1,11 @@
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\infrastructure\controllers\ColorController.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\domain\dtos\ColorResponse.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\domain\entities\Color.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\application\services\ColorService.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\application\services\ColorServiceMySql.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\domain\dtos\ColorListResponse.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\infrastructure\controllers\ColorControllerRest.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\domain\repositories\ColorRepository.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\ColorsMysqlApplication.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\infrastructure\handlers\ErrorHandler.java
+D:\Xpedition-Trainee-Backend\colors-mysql\src\main\java\com\trainee\colors\domain\dtos\ColorRequest.java

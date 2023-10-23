@@ -26,7 +26,7 @@ public class ColorServiceMySql implements ColorService {
 
     @Override
     public ColorListResponse findAll(Pageable pageable) {
-        pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("createdOn", "lastUpdatedOn").descending());
+        pageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by("lastUpdatedOn", "createdOn").descending());
         Page<Color> colorPage = this.colorRepository.findAll(pageable);
         List<ColorResponse> colorResponses = colorPage.stream().map(ColorResponse::new).toList();
         ColorListResponse colorListResponse = new ColorListResponse();

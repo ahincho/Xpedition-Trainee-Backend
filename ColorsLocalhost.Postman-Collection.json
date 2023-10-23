@@ -1,0 +1,1260 @@
+{
+	"info": {
+		"_postman_id": "f937f895-937c-4d52-974f-61405ca9ae67",
+		"name": "Colors Localhost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28629003"
+	},
+	"item": [
+		{
+			"name": "JSON",
+			"item": [
+				{
+					"name": "Get Colors",
+					"item": [
+						{
+							"name": "Get Colors Default",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Colors First Page",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}?page=0",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Colors Second Page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}?page=1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Colors Last Page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}?page=6",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Colors No Content Page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}?page=100",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Color By Id",
+					"item": [
+						{
+							"name": "Get Color Found",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Color Not Found",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/100",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"100"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Color Invalid",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/a",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"a"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post Color",
+					"item": [
+						{
+							"name": "Create Color Without Payload",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Creat Color Without Name",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"color\": \"#123456\",\r\n    \"pantone\": \"12-3456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Color Invalid Format",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"fucsia\",\r\n    \"color\": \"#1236\",\r\n    \"pantone\": \"12-45\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Color Valid Format",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"skyblue\",\r\n    \"color\": \"#987654\",\r\n    \"pantone\": \"12-9876\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Put Color",
+					"item": [
+						{
+							"name": "Update Color Not Found",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"purple\",\r\n    \"color\": \"#654321\",\r\n    \"pantone\": \"24-1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/100",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"100"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Color Without Payload",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Color Without Name",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"color\": \"#654321\",\r\n    \"pantone\": \"24-1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Color Invalid Format",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"purple\",\r\n    \"color\": \"654321\",\r\n    \"pantone\": \"2412-34\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Color Valid Format",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"purple\",\r\n    \"color\": \"#654321\",\r\n    \"pantone\": \"00-1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete Color",
+					"item": [
+						{
+							"name": "Delete Color Not Found",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/100",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"100"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Color Invalid",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/abc",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"abc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Color Found",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/61",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"61"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "XML",
+			"item": [
+				{
+					"name": "Get Colors",
+					"item": [
+						{
+							"name": "Get Colors Default",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Colors First Page",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}?page=0",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Colors Second Page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}?page=1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Colors Last Page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}?page=6",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Colors No Content Page",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}?page=100",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Color By Id",
+					"item": [
+						{
+							"name": "Get Color Not Found",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/100",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"100"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Color Invalid",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/a",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"a"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Color Found",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post Color",
+					"item": [
+						{
+							"name": "Create Color Without Payload",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Creat Color Without Name",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"color\": \"#123456\",\r\n    \"pantone\": \"12-3456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Color Invalid Format",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"fucsia\",\r\n    \"color\": \"#1236\",\r\n    \"pantone\": \"12-45\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Color Valid Format",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"skyblue\",\r\n    \"color\": \"#987654\",\r\n    \"pantone\": \"12-9876\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Put Color",
+					"item": [
+						{
+							"name": "Update Color Not Found",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"purple\",\r\n    \"color\": \"#654321\",\r\n    \"pantone\": \"24-1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/100",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"100"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Color Without Payload",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Color Without Name",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"color\": \"#654321\",\r\n    \"pantone\": \"24-1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Color Invalid Format",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"purple\",\r\n    \"color\": \"654321\",\r\n    \"pantone\": \"2412-34\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Color Valid Format",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"purple\",\r\n    \"color\": \"#654321\",\r\n    \"pantone\": \"00-1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/1",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete Color",
+					"item": [
+						{
+							"name": "Delete Color Not Found",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/100",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"100"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Color Invalid",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/abc",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"abc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Color Found",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/xml",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{rest-api}}/{{colors}}/61",
+									"host": [
+										"{{rest-api}}"
+									],
+									"path": [
+										"{{colors}}",
+										"61"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "rest-api",
+			"value": "localhost:10000",
+			"type": "string"
+		},
+		{
+			"key": "colors",
+			"value": "api/colors",
+			"type": "string"
+		}
+	]
+}

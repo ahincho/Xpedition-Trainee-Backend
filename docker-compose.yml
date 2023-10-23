@@ -4,13 +4,13 @@
 version: '3.8'
 services:
   ### API Rest with Spring Boot
-  colors-api:
+  colors:
     container_name: colors-api
-    image: springboot-colors:1.0
+    image: springboot-colors:1.1
     ports:
-      - "8080:8080"
+      - "8085:8080"
     expose:
-      - 8080
+      - 8085
     environment:
       - DATABASE_URL=jdbc:mysql://b3zhqrmlvkazmah8cezb-mysql.services.clever-cloud.com:3306/b3zhqrmlvkazmah8cezb
       - DATABASE_USERNAME=uhqqz4z41kul3wwg

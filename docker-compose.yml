@@ -1,0 +1,17 @@
+### Springboot API Rest - Colors
+### Run this Command on Terminal to Create the Docker Containers
+### > docker compose up --build
+version: '3.8'
+services:
+  ### API Rest with Spring Boot
+  colors-api:
+    container_name: colors-api
+    image: springboot-colors:1.0
+    ports:
+      - "8085:8085"
+    expose:
+      - 8085
+    environment:
+      - DATABASE_URL=jdbc:mysql://b3zhqrmlvkazmah8cezb-mysql.services.clever-cloud.com:3306/b3zhqrmlvkazmah8cezb
+      - DATABASE_USERNAME=uhqqz4z41kul3wwg
+      - DATABASE_PASSWORD=Z0sRBgJvbY1Or66DfBU9

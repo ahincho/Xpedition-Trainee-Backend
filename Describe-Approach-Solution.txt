@@ -1,0 +1,29 @@
+PREGUNTA : DESCRIBE EL ENFOQUE DE TU SOLUCIÓN (ANGEL EDUARDO HINCHO JOVE)
+
+Mi solución para el reto de Backend Developer se centra en el desarrollo de una API REST llamada "Spring Boot Colors API". Aquí, proporciono una descripción detallada de mi enfoque para abordar este desafío:
+
+Objetivo Principal: El objetivo principal de mi solución es proporcionar acceso a una paleta de colores estandarizada para su uso en una variedad de aplicaciones, desde sitios web hasta materiales impresos. La API permite a los usuarios crear, leer, actualizar y eliminar colores, así como recuperar colores de acuerdo con criterios específicos. Por ello implementé una API Rest usando buenas prácticas y servicios en la nube o cloud para que ustedes como evaluadores y en general el público pueda utilizar mi API Rest sin necesidad de instalaciones u otros inconvenientes.
+
+Tecnologías Utilizadas: Para lograr esto, utilicé las siguientes tecnologías y herramientas:
+
+Java 17: Utilicé Java como lenguaje de programación principal debido a su robustez y eficacia en el desarrollo de servicios web y aplicaciones.
+Spring Boot: Implementé la lógica de negocio y la exposición de servicios rest utilizando Spring Boot, un framework robusto y activamente mantenido en el mundo Java.
+MySQL: Almacené los datos en una base de datos relacional MySQL, conocida por su estabilidad y consistencia.
+Swagger y OpenAPI: Proporcioné documentación clara y accesible de la API Rest utilizando Swagger y OpenAPI para facilitar su uso y comprensión.
+Docker: Dockerizé la aplicación para facilitar la implementación y ejecución en diferentes entornos.
+Clever Cloud y Render: Desplegué la aplicación en estos servicios de la nube para permitir un fácil acceso y uso en la nube o en un entorno de producción.
+Postman: Utilicé Postman para probar y validar la funcionalidad de la API.
+Git Hub y Docker Hub: Utilicé estos repositorios para almacenar el código fuente y las imágenes Docker respectivamente.
+Arquitectura Hexagonal: Implementé una arquitectura hexagonal que divide la aplicación en tres capas: dominio, aplicación e infraestructura. Esto proporciona una estructura organizada y facilita el mantenimiento a largo plazo. La capa de dominio contiene las entidades y las reglas de negocio. La capa de aplicación maneja la lógica de negocio y los servicios, mientras que la capa de infraestructura expone los servicios rest y gestiona la interacción con la base de datos.
+
+API Rest: Desarrollé una API Rrest que cumple con los principios Rest. Ofrecí operaciones CRUD para los colores, lo que permite a los usuarios crear, leer, actualizar y eliminar colores. Implementé la paginación y la validación de campos para garantizar la integridad de los datos.
+
+Documentación Clara: Generé una documentación clara y comprensible para la API utilizando Swagger y Open API. Esto permite a los usuarios conocer los endpoints disponibles y sus funcionalidades. La documentación también incluye ejemplos de solicitudes y respuestas.
+
+Pruebas y Validación: Realicé pruebas exhaustivas de la API utilizando Postman. Garanticé que la API respondiera con códigos HTTP apropiados, además de proporcionar respuestas en formato JSON o XML, según la preferencia del cliente.
+
+Implementación en la Nube: Facilité el acceso a la API al desplegarla en servicios en la nube como Clever Cloud y Render. Esto permite a los usuarios utilizar la API sin necesidad de configuraciones locales.
+
+Poblado de la Base de Datos: Proporcioné instrucciones claras sobre cómo poblar la base de datos en diferentes entornos, ya sea en desarrollo local o en contenedores Docker.
+
+Colaboración y Revisión: Configuré mi repositorio de código en GitHub para mantener un registro de todos los cambios y revisiones. El repositorio estará disponible en modo público después de la fecha de entrega del desafío.

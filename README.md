@@ -38,7 +38,7 @@ He desarrollado una API Rest utilizando tecnologías como el Lenguaje de Program
 
 - A
 
-## 5. Enlace (URL) al Ambiente del Producción
+## **5. Enlace (URL) al Ambiente del Producción**
 
 Estoy utilizando servicios de hosting gratuitos como Clever Cloud y Render para poder desplegar mi aplicación o API Rest en la nube.
 
@@ -66,7 +66,7 @@ https://xpedition-trainee-backend.onrender.com/v3/api-docs
 
 Recomiendo abrirlo desde Mozilla Firefox u Opera. En su defecto, instalar una extensión que formatee el archivo JSON con la documentación de mi API Rest
 
-### **Swagger y Open API de la API Rest**
+### **Interfaz Swagger u Open API de la API Rest**
 
 https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
 
@@ -76,7 +76,35 @@ Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expo
 
 ## 7. Revisión Rápida de los Requerimientos
 
-## 8. Especificaciones y Documentación
+## **8. Especificaciones y Documentación**
+
+La documentación la genero utilizando el estándar de Open API y Swagger. También entrego como documentación algunos enlaces útiles sobre las tecnologías, frameworks y ambientes utilizados
+
+### **Repositorio de Código Fuente en GitHub**
+
+https://github.com/ahincho/Xpedition-Trainee-Backend
+
+Inicialmente lo configuré como privado y trabajé los 3 días de plazo para la entrega del reto de modo privado. Sin embargo, una vez pasada la fecha de entrega habilitaré el modo público para que puedan revisarlo y tener acceso a él.
+
+### **Repositorio de Imágenes en DockerHub**
+
+https://hub.docker.com/r/ahincho/springboot-colors
+
+Lo cree el 2do día del reto para empezar a dockerizar mi aplicación y que esta se pueda ejecutar de una manera más cómoda sin tener que realizar tantas configuraciones como normalmente se hace en proyectos stand alone
+
+La imagen requiere que entreguemos ciertos parámetros como lo sería en enlace de conexión, el usuario y contraseña hacia la base de datos. En este caso he utilizado MySQL como base de datos y dejé algunos comentarios en Docker Hub de como descargar y correr el contenedor o imagen
+
+### **Documentación la API Rest**
+
+https://xpedition-trainee-backend.onrender.com/v3/api-docs
+
+Recomiendo abrirlo desde Mozilla Firefox u Opera. En su defecto, instalar una extensión que formatee el archivo JSON con la documentación de mi API Rest
+
+### **Interfaz Swagger u Open API de la API Rest**
+
+https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
+
+Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expongo todos mis métodos, formatos y retornos de mi API Rest usando el estándar Open API
 
 ## 9. Revisión Rápida de los Puntos a Evaluar
 

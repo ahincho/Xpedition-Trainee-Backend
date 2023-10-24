@@ -2,19 +2,13 @@
 
 ## 1. Descripción del Reto para Backend
 
-En la empresa en la que actualmente trabajas han estandarizado los colores que se van a utilizar para todos los productos; para páginas web, nuevos diseños, flyers y hasta para redes sociales.
+En mi empresa, se ha establecido un estándar de colores para su uso en diversos productos, como sitios web, nuevos diseños, materiales impresos y redes sociales. Con el objetivo de facilitar el acceso a estos colores para otros departamentos y diseñadores, se me ha asignado la tarea de desarrollar una API que proporcionará acceso a esta paleta de colores. Mi compañera se encargará de crear la interfaz de usuario (Frontend) para interactuar con esta API.
 
-Para que los demás departamentos y diseñadores puedan tener acceso a los colores, te han dado a ti y a una compañera la tarea de crear una aplicación para poder copiarlos fácilmente.
+## 2. Breve Introducción a la Aplicación
 
-Tu estás encargado/a de crear una API que devuelva los colores y tu compañera está encargada de crear el Frontend.
+- 
 
-## 2. Requerimientos del Reto Backend
-
-### a. Descripción de la Solución
-
-El presente proyecto se trata de una API Rest utilizando el lenguaje de programación de Java y su framework de Spring Boot.
-
-### b. Tecnologías Utilizadas
+## 3. Listado de Tecnologías y Frameworks Utilizados
 
 - Java 17: Lenguaje de Programación Java en su versión 17. Disponible en https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
 
@@ -40,11 +34,21 @@ El presente proyecto se trata de una API Rest utilizando el lenguaje de programa
 
 - Render: Servicio de Hosting de Aplicaciones y Servicios Web en general. Nos permite trabajar con artefactos de software o imágenes de Docker.
 
-## X. Puntos a Evaluar del Reto para Backend
+## 4. Instalación de las Dependencias y Ejecución del Proyecto
 
 - A
 
-## 6. Puntos Extras del Reto para Backend
+## 5. Enlace (URL) al Ambiente del Producción
+
+## 6. Instrucciones de Como Poblar la Base de Datos del Ambiente de Desarrollo
+
+## 7. Revisión Rápida de los Requerimientos
+
+## 8. Especificaciones y Documentación
+
+## 9. Revisión Rápida de los Puntos a Evaluar
+
+## 10. Revisión Rápida de los Puntos Extras del Reto
 
 - Pruebas Unitarias o Alguna Herramienta: Postman (Archivos en repo github)
 

@@ -102,9 +102,9 @@ Disponible en: https://render.com/
 
 Estoy utilizando servicios de hosting gratuitos como Clever Cloud y Render para poder desplegar mi aplicación o API Rest en la nube.
 
-Algo que tengo que dejar en claro es que estos servicios al ser gratuitos tienen un control sobre la actividad de los usuarios, es decir, si nadie realizar peticiones el servidor se apagará automaticamente.
+Algo que tengo que dejar en claro es que estos servicios al ser gratuitos tienen un control sobre la actividad de los usuarios, es decir, si nadie realiza peticiones el servidor se apagará automaticamente.
 
-Para volver a reiniciar o encender el servicio debemos realizar algunas peticiones desde Postman o un Navegador Web. Lo que recomiendo es utilizar Postman y enviar una solicitud GET al endpoint de listado de colores.
+Para volver a reiniciar o encender el servicio debemos realizar algunas peticiones desde Postman o un Navegador Web. Lo que recomiendo es utilizar Postman y enviar una solicitud GET al endpoint de listado de colores o acceder varias veces desde el navegador hacia las URLs del ambiente de producción que comparto.
 
 Sin ningún otro alcance, comparto las URLs de mi Ambiente de Producción en Render y Base de Datos MySQL en Clever Cloud.
 
@@ -132,7 +132,37 @@ https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
 
 Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expongo todos mis métodos, formatos y retornos de mi API Rest usando el estándar Open API
 
-## 6. Instrucciones de Como Poblar la Base de Datos del Ambiente de Desarrollo
+## 6. Instrucciones de Como Poblar la Base de Datos del Proyecto
+
+Este apartado depende mucho de como vayamos a desplegar el proyecto. Suena complicado pero realmente no lo es. Ahora lo explicaré de manera sencilla y entendible.
+
+### **a. Poblado de la Base de Datos del Ambiente de Desarrollo**
+
+Este es el caso más sencillo de todo el proyecto. Debemos dirigirnos al archivo de configuración central 'application.properties' y descomentar la línea "spring.jpa.hibernate.ddl-auto = create" y luego comentar la línea 'spring.jpa.hibernate.ddl-auto = update'.
+
+Lo que hará lo anterior es básicamente inicializar o poblar la base de datos de desarrollo con los datos que se encuentran en el archivo 'import.sql'.
+
+Si existen dudas de dónde se encuentran estos archivos les comparto su ubicación aquí mismo.
+
+- Archivo 'application.properties': src/main/resources/application.properties
+
+- Archivo 'import.sql': src/main/resources/import.sql
+
+### **b. Poblado de la Base de Datos en un Contenedor**
+
+Podemos agregar otro contenedor con una imagen de MySQL en nuestro archivo 'docker-compose' y luego iniciar sus datos con el archivo 'init.sql'.
+
+Si vamos a agregar dicho contendor con la imagen de MySQL entonces debemos agregar el parámetro 'volumen' y copiart el archivo 'init.sql' dentro de la máquina virtual o contenedor.
+
+Quedaría algo como: './init.sql:/docker-entrypoint-initdb.d'. Esta sentencia lo que hace es copiar el archivo 'init.sql' hacia nuestra base de datos dockerizada y ejecutar dicho script para poblar la base de datos.
+
+- Archivo 'docker-compose': docker-compose.yml (Ambos se encuentra en el directorio raiz)
+
+- Archivo 'init.sql': init.sql (Ambos se encuentra en el directorio raiz)
+
+### **c. Poblado de la Base de Datos en el Ambiente de Producción o Nube**
+
+También este proceso es sencillo ya que he creado una colección en Postman 'ColorsCloudPopulation.Postman-Collection.json' (Se encuentra en el directorio raiz) que envía solicitudes de tipo HTTP Post para crear varios colores. Entonces solo debemos abrir esta colección en Postman y ejecutarla.
 
 ## 7. Revisión Rápida de los Requerimientos
 

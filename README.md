@@ -166,7 +166,7 @@ https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
 
 Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expongo todos mis métodos, formatos y retornos de mi API Rest usando el estándar Open API
 
-## 6. Instrucciones de Como Poblar la Base de Datos del Proyecto
+## **6. Instrucciones de Como Poblar la Base de Datos del Proyecto**
 
 Este apartado depende mucho de como vayamos a desplegar el proyecto. Suena complicado pero realmente no lo es. Ahora lo explicaré de manera sencilla y entendible.
 
@@ -198,7 +198,47 @@ Quedaría algo como: './init.sql:/docker-entrypoint-initdb.d'. Esta sentencia lo
 
 También este proceso es sencillo ya que he creado una colección en Postman 'ColorsCloudPopulation.Postman-Collection.json' (Se encuentra en el directorio raiz) que envía solicitudes de tipo HTTP Post para crear varios colores. Entonces solo debemos abrir esta colección en Postman y ejecutarla.
 
-## 7. Revisión Rápida de los Requerimientos
+## **7. Requerimientos del Proyecto - Revisión Rápida**
+
+### **a. Implementar un CRUD de Colores de acuerdo a las Especificaciones y Estándares**
+
+He implementado el CRUD de Colores utilizando Java, Spring Boot y MySQL a través de una API Rest con métodos HTTP GET, POST, UPDATE y DELETE. Se puede utilizar desde un ambiente local pero la mejor opción es el servicio web en la nube que he creado con la ayuda de Clever Cloud y Render. Disponible en: 'https://xpedition-trainee-backend.onrender.com/api/colors'. En otras secciones explico otros tipos de instalación y como ejecutar las colecciones de prueba en Postman.
+
+### **b. Implementar Paginación**
+
+Al momento de llamar o enviar solicitudes al endpoint 'https://xpedition-trainee-backend.onrender.com/api/colors' utilizando el métood HTTP GET obtenemos una página con 9 colores (Requerimiento del Frontend) así como un enlace a la siguiente página y también a la previa (Si es que existen). En caso no exista contenido en una página entonces se devuelve el Status 204 No Content.
+
+Puede revisar como he implementado la paginación de los datos que ofrece la API Rest (Pageable) revisando los archivos 'src/main/java/com/trainee/colors/application/services/ColorServiceMySql.java' y 'src/main/java/com/trainee/colors/infrastructure/controllers/ColorControllerRest.java' en mi repositorio de Git Hub
+
+### **c. Validación de los Campos Color y Pantone**
+
+Para esto me he apoyado mucho en el framework de Spring Boot y el patrón Data Transfer Object donde utilizo los Bean Validators y Expresiones Regulares (Regex) para recuperar el objeto que estoy recibiendo hacia mi API Rest.
+
+Puede revisar como he implementado la Validación revisando en los siguientes archivos 'src/main/java/com/trainee/colors/domain', 'src/main/java/com/trainee/colors/domain/dtos/ColorRequest.java' y 'src/main/java/com/trainee/colors/infrastructure/controllers/ColorControllerRest.java'
+
+### **d. Responder con los Colores más Recientes en Creación y Actualización**
+
+Para ello me apoyo mucho, nuevamente, en el framework de Spring Boot. Donde utilizo las páginas o Pages y luego aplico un filtro de ordenación sobre los campos 'createdOn' y 'lastUpdateOn' (Creación y actualización) de forma descendente (Para ver las últimas modificaciones y agregaciones)
+
+Puede revisar como lo he implementado en el archivo 'src/main/java/com/trainee/colors/application/services/ColorServiceMySql.java' exactamente en el método 'findAll()' usando 'Sort.by("lastUpdatedOn", "createdOn").descending()'
+
+### **e. Archivo Semilla para Poblar los Datos en Desarrollo**
+
+Ya explique como poblar la Base de Datos MySQL en otros apartados y cómo podemos utilizar tanto las colecciones en Postman como las sentencias SQL que se encuentran en 'src/main/resources/import.sql', 'init.sql' y 'ColorsCloudPopulation.Postman-Collection.json'
+
+### **f. Devolver JSON o XML**
+
+También ya lo expliqué en otro apartado del ReadMe, básicamente utilizo la librería Jackson para poder transformar los datos que envío de mi API Rest a los formatos JSON y XML. Para ello el usuario o cliente debe incluir en el request el header 'Accept: application/xml'.
+
+Puede revisar como lo he implementado en el archivo 'src/main/java/com/trainee/colors/infrastructure/controllers/ColorControllerRest.java' utilizando el argumento 'produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE }'
+
+### **g. Diagrama Entidad Relación para Agregar Usuarios**
+
+Lo estoy agregando tanto en formato PDF tanto en el repositorio de código fuente en Git Hub como en el envío del Backend Challenge. Básicamente tenemos una relación de 'uno a varios' entre la entidad Usuario y la entidad Color. Donde un Usuario puede tener varios Colores y varios Colores pertenecen a un solo Usuario (los colores pueden variar en nombres)
+
+### **h. Archivo de Texto Describiendo el Enfoque de mi Solución**
+
+En sí sería todo este archivo Read Me que estoy desarrollando y subiendo a mi repositorio de código fuente en Git Hub. Sin embargo, estoy generando otro archivo de texto más resumido y adjuntandolo en la entrega.
 
 ## **8. Especificaciones y Documentación**
 

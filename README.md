@@ -198,20 +198,48 @@ Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expo
 
 ## 9. Revisión Rápida de los Puntos a Evaluar
 
-## 10. Revisión Rápida de los Puntos Extras del Reto
+## 10. Puntos Extras del Reto - Revisión Rápida
 
-- Pruebas Unitarias o Alguna Herramienta: Postman (Archivos en repo github)
+### **a. Pruebas Unitarias o Alguna Herramienta**
 
-- Código HTTP Correctos. (Capa controller y errorHandler)
+He utilizado Postman para realizar pruebas, tanto en ambiente de producción como en ambiente de desarrollo, a mi API Rest. Para todos los métodos que he implemetado: GET, POST, PUT y DELETE.
 
-- Dockerización del Proyecto: Archivo Dockerfile (https://hub.docker.com/r/ahincho/springboot-colors)
+Las pruebas o colecciones en Postman se encuentra en el directorio raíz de mi proyecto en Git Hub y son los archivos 'ColorsCloudDeployment.Postman-Collection.json' (Producción) y 'ColorsLocalhost.Postman-Collection.json' (Desarrollo).
 
-- URL del Ambiente de Producción:
+### **b. Código HTTP Correctos**
 
-	- https://xpedition-trainee-backend.onrender.com/
-	- https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
-	- https://xpedition-trainee-backend.onrender.com/v3/api-docs
+Esto se puede ver implementado en código Java y con ayuda del framework Spring Boot. He seguido una arquitectura hexagonal y programación orientada a aspectos (AOP) donde controlo los estados, retornos y posibles errores de mi API Rest en las capas de aplicación e infraestructura.
 
-- Respuesta en XML: Agregar Header "Accept application/xml" en el REQUEST (Test en los archivos Postman)
+Para poder ver los estados que retorno en cada tipo de retorno o llamada puede revisar los archivos:
 
-- Colección de Endpoints en Postman o Insomnia.
+- src/main/java/com/trainee/colors/application/services/ColorServiceMySql.java
+- src/main/java/com/trainee/colors/infrastructure/controllers/ColorControllerRest.java
+- src/main/java/com/trainee/colors/infrastructure/handlers/ErrorHandler.java
+
+### **c. Dockerización del Proyecto**
+
+Utilizando los servicios de Docker, Docker Desktop y Docker Hub he logrado dockerizar mi aplicación API Rest con Spring Boot y MySQL usando el archivo Dockerfile y Docker Compose (Directorio raíz del proyecto)
+
+Luego de dockerizar mi aplicación o API Rest, subi la imagen al repositorio de Docker Hub que almacena varias imágenes de softwares y aplicaciones que podemos utilizar.
+
+Disponible en: https://hub.docker.com/r/ahincho/springboot-colors
+
+### **d. Links (URLs) del Ambiente de Producción**
+
+Algo que tengo que dejar en claro es que estos servicios al ser gratuitos tienen un control sobre la actividad de los usuarios, es decir, si nadie realiza peticiones el servidor se apagará automaticamente.
+
+Para volver a reiniciar o encender el servicio debemos realizar algunas peticiones desde Postman o un Navegador Web. Lo que recomiendo es utilizar Postman y enviar una solicitud GET al endpoint de listado de colores o acceder varias veces desde el navegador hacia las URLs del ambiente de producción que comparto.
+
+- https://xpedition-trainee-backend.onrender.com (Servidor gratuito en Render)
+- https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html (Interfaz de Swagger y Open API de la API Rest desarrollada)
+- https://xpedition-trainee-backend.onrender.com/v3/api-docs (Documentación de la API Rest desarrollada)
+
+### **e. Respuesta en XML**
+
+Para recibir una respuesta en formato XML de mi API Rest se debe agregar el header "Accept: application/xml" en el request o petición HTTP a cualquier endpoint
+
+Para facilitar esto he creado casos y requests de pruebas utilizando Postman. Estos se encuentra en los archivos 'ColorsCloudDeployment.Postman-Collection.json' y 'ColorsLocalhost.Postman-Collection.json' (Directorio Raiz). Ambos tienen una subcarpeta llamada XML donde encontrarán ese tipo de retorno o respuesta.
+
+### **f. Colección de Endpoints en Postman o Insomnia**
+
+Como ya lo comente en el punto anterior, he documentado y testeado la API Rest utilizando Postman y creando las colecciones 'ColorsCloudDeployment.Postman-Collection.json' y 'ColorsLocalhost.Postman-Collection.json' (Directorio Raiz)

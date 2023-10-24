@@ -1,0 +1,1637 @@
+{
+	"info": {
+		"_postman_id": "efdaa20b-b7ce-4cbb-9434-c7030c5353f3",
+		"name": "Colors Cloud Population",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28629003"
+	},
+	"item": [
+		{
+			"name": "Initialize Web Service (Try 3 times)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}?page=0",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Salmon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Salmon\",\r\n    \"color\": \"#FA8072\",\r\n    \"pantone\": \"12-9895\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Light Coral",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Light Coral\",\r\n    \"color\": \"#F08080\",\r\n    \"pantone\": \"12-9838\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dark Salmon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dark Salmon\",\r\n    \"color\": \"#E9967A\",\r\n    \"pantone\": \"12-9995\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Light Salmon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Light Salmon\",\r\n    \"color\": \"#FFA07A\",\r\n    \"pantone\": \"12-9835\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crimson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Crimson\",\r\n    \"color\": \"#DC143C\",\r\n    \"pantone\": \"12-1995\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Red",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Red\",\r\n    \"color\": \"#FF0000\",\r\n    \"pantone\": \"12-9845\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fire Brick",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Fire Brick\",\r\n    \"color\": \"#B22222\",\r\n    \"pantone\": \"12-9195\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dark Red",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dark Red\",\r\n    \"color\": \"#8B0000\",\r\n    \"pantone\": \"12-5895\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pink\",\r\n    \"color\": \"#FFC0CB\",\r\n    \"pantone\": \"13-9895\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Light Pink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Light Pink\",\r\n    \"color\": \"#FFB6C1\",\r\n    \"pantone\": \"16-9895\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hot Pink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Hot Pink\",\r\n    \"color\": \"#FF69B4\",\r\n    \"pantone\": \"12-9195\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deep Pink",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Deep Pink\",\r\n    \"color\": \"#FF1493\",\r\n    \"pantone\": \"11-9875\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medium Violet Red",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Medium Violet Red\",\r\n    \"color\": \"#C71585\",\r\n    \"pantone\": \"19-9835\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pale Violet Red",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pale Violet Red\",\r\n    \"color\": \"#DB7093\",\r\n    \"pantone\": \"14-9635\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coral",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Coral\",\r\n    \"color\": \"#FF7F50\",\r\n    \"pantone\": \"17-6635\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tomato",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tomato\",\r\n    \"color\": \"#FF6347\",\r\n    \"pantone\": \"11-6632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orange Red",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Orange Red\",\r\n    \"color\": \"#FF4500\",\r\n    \"pantone\": \"12-6532\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dark Orange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dark Orange\",\r\n    \"color\": \"#FF8C00\",\r\n    \"pantone\": \"11-6612\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Orange\",\r\n    \"color\": \"#FFA500\",\r\n    \"pantone\": \"18-6632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gold",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gold\",\r\n    \"color\": \"#FFD700\",\r\n    \"pantone\": \"16-6652\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Light Yellow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Light Yellow\",\r\n    \"color\": \"#FFFFE0\",\r\n    \"pantone\": \"11-6132\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lemon Chiffon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lemon Chiffon\",\r\n    \"color\": \"#FFFACD\",\r\n    \"pantone\": \"11-7622\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Light Golden rod Yellow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Light Golden rod Yellow\",\r\n    \"color\": \"#FAFAD2\",\r\n    \"pantone\": \"11-1652\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Papaya Whip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Papaya Whip\",\r\n    \"color\": \"#FFEFD5\",\r\n    \"pantone\": \"11-1632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Moccasin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Moccasin\",\r\n    \"color\": \"#FFE4B5\",\r\n    \"pantone\": \"11-7832\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peach Puff",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Peach Puff\",\r\n    \"color\": \"#FFDAB9\",\r\n    \"pantone\": \"11-2652\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pale Goldenrod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pale Goldenrod\",\r\n    \"color\": \"#EEE8AA\",\r\n    \"pantone\": \"17-6622\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Khaki",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Khaki\",\r\n    \"color\": \"#F0E68C\",\r\n    \"pantone\": \"18-6631\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dark Khaki",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dark Khaki\",\r\n    \"color\": \"#BDB76B\",\r\n    \"pantone\": \"11-4612\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lavender",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lavender\",\r\n    \"color\": \"#E6E6FA\",\r\n    \"pantone\": \"17-6631\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Thistle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Thistle\",\r\n    \"color\": \"#D8BFD8\",\r\n    \"pantone\": \"21-1632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Plum",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Plum\",\r\n    \"color\": \"#DDA0DD\",\r\n    \"pantone\": \"12-3632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Violet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Violet\",\r\n    \"color\": \"#EE82EE\",\r\n    \"pantone\": \"18-6132\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orchid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Orchid\",\r\n    \"color\": \"#DA70D6\",\r\n    \"pantone\": \"12-7632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fuchsia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Fuchsia\",\r\n    \"color\": \"#FF00FF\",\r\n    \"pantone\": \"17-6612\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Magenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Magenta\",\r\n    \"color\": \"#FF00FF\",\r\n    \"pantone\": \"13-6732\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medium Orchid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Medium Orchid\",\r\n    \"color\": \"#BA55D3\",\r\n    \"pantone\": \"15-2632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medium Purple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Medium Purple\",\r\n    \"color\": \"#9370DB\",\r\n    \"pantone\": \"18-6232\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rebecca Purple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rebecca Purple\",\r\n    \"color\": \"#663399\",\r\n    \"pantone\": \"11-3652\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blue Violet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Blue Violet\",\r\n    \"color\": \"#8A2BE2\",\r\n    \"pantone\": \"14-6612\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dark Violet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dark Violet\",\r\n    \"color\": \"#9400D3\",\r\n    \"pantone\": \"17-6132\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dark Orchid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dark Orchid\",\r\n    \"color\": \"#9932CC\",\r\n    \"pantone\": \"18-6622\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dark Magenta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dark Magenta\",\r\n    \"color\": \"#8B008B\",\r\n    \"pantone\": \"17-6612\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Purple\",\r\n    \"color\": \"#800080\",\r\n    \"pantone\": \"18-6631\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Indigo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Indigo\",\r\n    \"color\": \"#4B0082\",\r\n    \"pantone\": \"17-6622\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Slate Blue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Slate Blue\",\r\n    \"color\": \"#6A5ACD\",\r\n    \"pantone\": \"11-6832\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dark Slate Blue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dark Slate Blue\",\r\n    \"color\": \"#483D8B\",\r\n    \"pantone\": \"18-7632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Green Yellow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Green Yellow\",\r\n    \"color\": \"#ADFF2F\",\r\n    \"pantone\": \"19-4612\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lawn Green",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lawn Green\",\r\n    \"color\": \"#7CFC00\",\r\n    \"pantone\": \"18-1332\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lime",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lime\",\r\n    \"color\": \"#00FF00\",\r\n    \"pantone\": \"31-1632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pale Green",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pale Green\",\r\n    \"color\": \"#98FB98\",\r\n    \"pantone\": \"16-1622\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Light Green",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Light Green\",\r\n    \"color\": \"#90EE90\",\r\n    \"pantone\": \"11-1632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring Green",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Spring Green\",\r\n    \"color\": \"#00FF7F\",\r\n    \"pantone\": \"15-6132\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sea Green",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sea Green\",\r\n    \"color\": \"#2E8B57\",\r\n    \"pantone\": \"18-1632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forest Green",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Forest Green\",\r\n    \"color\": \"#FF6347\",\r\n    \"pantone\": \"11-6632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Green",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Green\",\r\n    \"color\": \"#008000\",\r\n    \"pantone\": \"17-6132\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Medium Aquamarine",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Medium Aquamarine\",\r\n    \"color\": \"#66CDAA\",\r\n    \"pantone\": \"12-6635\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dark Sea Green",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dark Sea Green\",\r\n    \"color\": \"#8FBC8B\",\r\n    \"pantone\": \"11-6672\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aqua",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aqua\",\r\n    \"color\": \"#00FFFF\",\r\n    \"pantone\": \"18-6632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pale Turquoise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pale Turquoise\",\r\n    \"color\": \"#AFEEEE\",\r\n    \"pantone\": \"18-3632\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cloud-api}}/{{colors}}",
+					"host": [
+						"{{cloud-api}}"
+					],
+					"path": [
+						"{{colors}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "cloud-api",
+			"value": "https://xpedition-trainee-backend.onrender.com",
+			"type": "string"
+		},
+		{
+			"key": "colors",
+			"value": "api/colors",
+			"type": "string"
+		}
+	]
+}

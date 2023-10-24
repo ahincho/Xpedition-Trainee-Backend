@@ -1,4 +1,4 @@
-# Xpedition Trainee - Backend Challenge
+# Xpedition Trainee - Backend Developer Challenge
 
 ## 1. Descripción del Reto para Backend
 
@@ -24,7 +24,13 @@ El presente proyecto se trata de una API Rest utilizando el lenguaje de programa
 
 - MySQL: Base de Datos Relacional.
 
+- Swagger y Open API: Documentación de la API Rest desarrollada.
+
 - Docker: Máquinas Virtuales.
+
+- Docker Desktop: Orquestación de Contenedores y Máquinas Virtuales.
+
+- Git Hub: Repositorio de Código Fuente gratuito y en la nube. También nos permite hacer integraciones con Clever Cloud y Render para desplegar Servicios Web en la Nube.
 
 - Docker Hub: Creación, subida y alojamiento de imágenes para máquinas virtuales.
 
@@ -33,3 +39,25 @@ El presente proyecto se trata de una API Rest utilizando el lenguaje de programa
 - Clever Cloud: Servicio de Base de Datos Gratuito.
 
 - Render: Servicio de Hosting de Aplicaciones y Servicios Web en general. Nos permite trabajar con artefactos de software o imágenes de Docker.
+
+## X. Puntos a Evaluar del Reto para Backend
+
+- A
+
+## 6. Puntos Extras del Reto para Backend
+
+- Pruebas Unitarias o Alguna Herramienta: Postman (Archivos en repo github)
+
+- Código HTTP Correctos. (Capa controller y errorHandler)
+
+- Dockerización del Proyecto: Archivo Dockerfile (https://hub.docker.com/r/ahincho/springboot-colors)
+
+- URL del Ambiente de Producción:
+
+	- https://xpedition-trainee-backend.onrender.com/
+	- https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
+	- https://xpedition-trainee-backend.onrender.com/v3/api-docs
+
+- Respuesta en XML: Agregar Header "Accept application/xml" en el REQUEST (Test en los archivos Postman)
+
+- Colección de Endpoints en Postman o Insomnia.

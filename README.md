@@ -10,29 +10,89 @@ He desarrollado una API Rest utilizando tecnologías como el Lenguaje de Program
 
 ## 3. Listado de Tecnologías y Frameworks Utilizados
 
-- Java 17: Lenguaje de Programación Java en su versión 17. Disponible en https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+### **a. Java 17**
 
-- Spring Boot: Framework Backend de Java muy conocido. La única dependencia que acarrea es un gestor de paquetes y constructor de artefactos de software como Maven o Gradle, en mi caso use Maven.
+Lenguaje de Programación Java en su versión 17. Uno de mis favoritos debido a su robustez al momento de desarrollar servicios web e incluso aplicaciones de escritorio
 
-- Maven: Gestor de paquetes y artefactos de software resultantes de un proyecto en Java. Disponible en https://maven.apache.org/download.cgi
+Disponible en: https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
 
-- MySQL: Base de Datos Relacional.
+### **b. Spring Boot**
 
-- Swagger y Open API: Documentación de la API Rest desarrollada.
+Framework para Backend de Java muy conocido, robusto y activo tanto en desarrollo y comunidad.
 
-- Docker: Máquinas Virtuales.
+La única dependencia que acarrea es un gestor de paquetes y constructor de artefactos de software como Maven o Gradle, en mi caso use Maven.
 
-- Docker Desktop: Orquestación de Contenedores y Máquinas Virtuales.
+Disponible en: https://spring.io/projects/spring-boot
 
-- Git Hub: Repositorio de Código Fuente gratuito y en la nube. También nos permite hacer integraciones con Clever Cloud y Render para desplegar Servicios Web en la Nube.
+### **c. Maven**
 
-- Docker Hub: Creación, subida y alojamiento de imágenes para máquinas virtuales.
+Gestor de paquetes y artefactos de software resultantes de un proyecto en Java. Nos permite configurar las dependencias, ciclo de vida del software y artefactos resultantes. Tiene un 'primo' llamado Gradle.
 
-- Postman: Testeo de la Api.
+Disponible en: https://maven.apache.org/download.cgi
 
-- Clever Cloud: Servicio de Base de Datos Gratuito.
+### **d. MySQL**
 
-- Render: Servicio de Hosting de Aplicaciones y Servicios Web en general. Nos permite trabajar con artefactos de software o imágenes de Docker.
+Base de Datos Relacional muy conocida en el mercado y con una buena historia de transfondo. Lo principal que puedo mencionar es que está en constante soporte y prioriza la consistencia y disponibilida de los datos (Teorema CAP de Base de Datos)
+
+Disponible en: https://www.mysql.com/downloads
+
+### **e. Swagger y Open API**
+
+Ayuda en la documentación de la API Rest desarrollada. Es un estándar adoptado por Google en el cual exponemos nuestros servicios web a través de un página centralizada que reune tanto endpoints como implementaciones.
+
+En lo personal la encuentra muy amigable para los usuarios y programadores cuando necesiten interactuar con nuestro servicio web.
+
+Disponible en: https://springdoc.org/
+
+### **f. Docker**
+
+Plataforma diseñada para ayudar a los programadores a compartir y subir sus aplicaciones en diferentes ambientes ya sean de producción o desarrollo usando máquinas virtuales
+
+Podría haber utilizando otro servicio de virtualización como lo sería Virtual Box pero Docker ofrece una facilidad de desarrollo y creación de imágenes a traves de los archivos o recetas Dockerfile que no pude ignorarlo
+
+Disponible en: https://www.docker.com/
+
+### **g. Docker Desktop**
+
+De la mano con Docker, es otra plataforma nos ayuda a gestionar nuestras imágenes y contenedores de una manera transparente y muy agradable a través de una interfaz de usuario. Como si se tratara del explorador de archivos de Windows
+
+Aquí utilicé Docker para poder levantar una instancia de mi aplicación en Spring Boot ya dockerizada utilizando la base de datos tanto local como remota con Clever Cloud que ya explicaré más adelante
+
+Disponible en: https://www.docker.com/products/docker-desktop/
+
+### **h. Git Hub**
+
+Muy conocido repositorio de código fuente gratuito en la nube. También nos permite hacer integraciones con Clever Cloud y Render para desplegar servicios web en la nube (CI/CD)
+
+Lo utilice tanto para llevar registro de todo mi proceso de desarrollo del reto así como el código fuente. Me ayudo muchisimo a subir a producción mi servicio web utilizando Render y Clever Cloud (CI/CD)
+
+Disponible en: https://github.com/
+
+### **i. Docker Hub**
+
+Al igual que Git Hub. Es una plataforma donde creamos, subimos y alojamos nuestras imágenes para máquinas virtuales. En este caso me ayudo mucho para poder exponer de manera sencilla y cómoda mi archivo Dockerfile y la imagen que genera para ustedes, señores evaluadores.
+
+Disponible en: https://hub.docker.com/
+
+### **j. Postman**
+
+Aplicación que simula el comportamiento de un cliente web. Su principal uso se encuentra en el testeo de la API Rest que he desarrollado. Tiene una versión en la nube que ayuda muchisimo para el proceso de testing.
+
+Disponible en: https://www.postman.com/downloads/
+
+### **k. Clever Cloud**
+
+Servicio de base de datos gratuito donde alojo todos los datos de mi API Rest para su versión en la nube o ambiente de producción. Nos permite crear algunas bases de datos en su nivel gratuito y de diferentes tipos como MySQL, PostgreSQL, MongoDB, etc. (SQL y NoSQL).
+
+Disponible en: https://www.clever-cloud.com/
+
+### **l. Render**
+
+Servicio en la web para el hosting de aplicaciones y servicios web en general de manera gratuita. Nos permite trabajar con artefactos de software (.jar) o imágenes de Docker. En este caso yo utilice una línea de producción (CI/CD) utilizando Docker y Dockerfile.
+
+Lo único malo (entre comillas) de la plataforma de hosting Render es que para ahorrar recursos (en la capa gratuita) apaga el servidor automáticamente si ningún usuario está utilizando nuestro servicio web, por lo que pido realizar unas cuantas peticiones web o acceder desde el navegador web al ambiente de producción varias veces o contactarme para mayor apoyo.
+
+Disponible en: https://render.com/
 
 ## 4. Instalación de las Dependencias y Ejecución del Proyecto
 

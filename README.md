@@ -94,9 +94,43 @@ Lo único malo (entre comillas) de la plataforma de hosting Render es que para a
 
 Disponible en: https://render.com/
 
-## 4. Instalación de las Dependencias y Ejecución del Proyecto
+## **4. Instalación de Dependencias y Ejecución del Proyecto: Enfoque en la Nube o Cloud**
 
-- A
+Esto dependenderá mucho del tipo de instalación que se quiera hacer por ejemplo Local, Dockerizado o en Nube (Cloud).
+
+### **a. Instalación Local del Proyecto**
+
+Para una instalación local necesitaremos copiar el código fuente que brindo en el repositorio que he creado en Git Hub para el Reto Backend Developer. Disponible en: https://github.com/ahincho/Xpedition-Trainee-Backend.git
+
+Empecemos con lo más sencillo, necesitaremos instalar de manera local el JDK de Java 17 (https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) y la Base de Datos MySQL (la configuración es personalizada). Luego de ello necesitaremos un Entorno de Desarrollo Integrado (IDE) el cual se encargará de ejecutar el proyecto, aquí recomiendo utilizar Visual Studio Code (VS Code) (https://code.visualstudio.com) o Intellij IDEA (https://www.jetbrains.com/idea/download)
+
+En mi caso, soy más familiar a Intellij IDEA. Además debemos instalar Maven en nuestra máquina virtual para poder ejecutar sus comandos de construcción y empaquetado (https://maven.apache.org/download.cgi). Finalmente con Java, MySQL, Intellij IDEA y Maven instalados debemos ejecutar desde Intellij IDEA la clase 'ColorsMysqlApplication' (src/main/java/com/trainee/colors/ColorsMysqlApplication.java) y con eso ya estaría levantando nuestra API Rest en el puerto 10000 de localhost.
+
+Es importante mencionar que las propiedades como conexión a Base de Datos MySQL se deben configurar en el archivo centralizado 'application.properties' (src/main/resources/application.properties) cambiando la URL, usuario y contraseña. Como podemos ver, la instalación local es muy tediosa y agotadora. Sin embargo, esto se solucionará más adelante.
+
+### **b. Instalación Dockerizada del Proyecto**
+
+Debemos instalar Docker y Docker Desktop (https://www.docker.com/products/docker-desktop/), que en realidad vienen de la mano, para poder utilizar este tipo de instalación.
+
+Finalmente debemos clonar la imagen de Docker que he subido a Docker Hub (https://hub.docker.com/r/ahincho/springboot-colors) y configurar nuevamente las variables de conexión hacia la Base de Datos MySQL.
+
+Para configurar la conexión a Base de Datos del proyecto dockerizado debemos agregar las variables de entorno 'DATABASE_URL', 'DATABASE_USERNAME' y 'DATABASE_PASSWORD' que corresponden cada una la URL, usuario y contraseña la Base de Datos en MySQL.
+
+Un ejemplo de dockerización de mi API Rest en Spring Boot se puede encontrar en el archivo 'docker-compose.yml' que está en mi repositorio en Git Hub. Se aconseja seguir de ejemplo ese archivo y luego ejecutar el comando 'docker compose up' para levantar el contenedor o aplicación dockerizada.
+
+Aquí como podemos ver, ya no tenemos mucho trabajo que hacer. Sin embargo, aún tenemos muchas cosas que instalar de manera local que se podrían evitar.
+
+### **c. Instalación en la Nube o Ambiente de Producción**
+
+Aquí, ya no necesitamos hacer ninguna instalación, ya que 'yo' he realizado toda la parte de la configuración e instalación en los servidores de Clever Cloud (Base de Datos MySQL) y Render (Hosting de la API Rest) antes de enviar mi Reto de Backend Developer.
+
+¿Es en serio? Sí, es en serio! Yo ya he 'sufrido' todo este proceso de instalación en la nube o cloud para que usted pueda utilizar mi API Rest de manera sencilla enviando solicitudes a través de un Frontend o usando Postman (https://www.postman.com/downloads).
+
+Lo único malo de esta instalación es que está sobre servidores y una capa gratuita así que demoran un poco en iniciar y usualmente se apagan por lo cual es necesario que usted envien algunas o varias solicitudes HTTP para que Render pueda volver a lanzar o iniciar la aplicación. Pero ya no debe instalar nada en su computadora u ordenador :)
+
+La API Rest se encuentra publicada en el servidor de Render 'https://xpedition-trainee-backend.onrender.com/' y usted puede acceder a los endpoints desde 'https://xpedition-trainee-backend.onrender.com/api/colors' o utizar la interfaz web Open API desde 'https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html' (Lo más amigable y agradable a la vista)
+
+- Para este apartado usted puede revisar los enlaces que he comparto en la sección de tecnologías y frameworks utilizados donde encontrará la mayoría de instaladores.
 
 ## **5. Enlace (URL) al Ambiente del Producción**
 

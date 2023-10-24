@@ -27,3 +27,10 @@ Implementación en la Nube: Facilité el acceso a la API al desplegarla en servi
 Poblado de la Base de Datos: Proporcioné instrucciones claras sobre cómo poblar la base de datos en diferentes entornos, ya sea en desarrollo local o en contenedores Docker.
 
 Colaboración y Revisión: Configuré mi repositorio de código en GitHub para mantener un registro de todos los cambios y revisiones. El repositorio estará disponible en modo público después de la fecha de entrega del desafío.
+
+Resultados:
+
+Repositorio en Git Hub: https://github.com/ahincho/Xpedition-Trainee-Backend
+Repositorio en Docker Hub: https://hub.docker.com/r/ahincho/springboot-colors
+API Rest en la Nube usando Clever Cloud y Render: https://xpedition-trainee-backend.onrender.com/api/colors
+Documentación e Interfaz de la API Rest usando Swagger y Open API: https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html

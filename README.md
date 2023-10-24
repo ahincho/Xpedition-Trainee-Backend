@@ -48,25 +48,25 @@ Para volver a reiniciar o encender el servicio debemos realizar algunas peticion
 
 Sin ningún otro alcance, comparto las URLs de mi Ambiente de Producción en Render y Base de Datos MySQL en Clever Cloud.
 
-### **Servidor en Render**
+### **a. Servidor en Render**
 
 https://xpedition-trainee-backend.onrender.com
 
 A veces está caído o inoperativo ya que es un servidor gratuito que se apaga cuando nadie lo utiliza y vuelve a iniciarse cuando recibe algunas solicitudes desde Postman o Navegador
 
-### **Puerto o Path de la API Rest**
+### **b. Puerto o Path de la API Rest**
 
 https://xpedition-trainee-backend.onrender.com/api/colors
 
 Usarlo desde Postman, por defecto devuelve el listado de colores paginado. Se puede acceder a los demás métodos o funcionalidades agregando IDs de los colores o cambiando el tipo de método HTTP
 
-### **Documentación la API Rest**
+### **c. Documentación la API Rest**
 
 https://xpedition-trainee-backend.onrender.com/v3/api-docs
 
 Recomiendo abrirlo desde Mozilla Firefox u Opera. En su defecto, instalar una extensión que formatee el archivo JSON con la documentación de mi API Rest
 
-### **Interfaz Swagger u Open API de la API Rest**
+### **d. Interfaz Swagger u Open API de la API Rest**
 
 https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
 
@@ -80,13 +80,13 @@ Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expo
 
 La documentación la genero utilizando el estándar de Open API y Swagger. También entrego como documentación algunos enlaces útiles sobre las tecnologías, frameworks y ambientes utilizados
 
-### **Repositorio de Código Fuente en GitHub**
+### **a. Repositorio de Código Fuente en GitHub**
 
 https://github.com/ahincho/Xpedition-Trainee-Backend
 
 Inicialmente lo configuré como privado y trabajé los 3 días de plazo para la entrega del reto de modo privado. Sin embargo, una vez pasada la fecha de entrega habilitaré el modo público para que puedan revisarlo y tener acceso a él.
 
-### **Repositorio de Imágenes en DockerHub**
+### **b. Repositorio de Imágenes en DockerHub**
 
 https://hub.docker.com/r/ahincho/springboot-colors
 
@@ -94,13 +94,13 @@ Lo cree el 2do día del reto para empezar a dockerizar mi aplicación y que esta
 
 La imagen requiere que entreguemos ciertos parámetros como lo sería en enlace de conexión, el usuario y contraseña hacia la base de datos. En este caso he utilizado MySQL como base de datos y dejé algunos comentarios en Docker Hub de como descargar y correr el contenedor o imagen
 
-### **Documentación la API Rest**
+### **c. Documentación la API Rest**
 
 https://xpedition-trainee-backend.onrender.com/v3/api-docs
 
 Recomiendo abrirlo desde Mozilla Firefox u Opera. En su defecto, instalar una extensión que formatee el archivo JSON con la documentación de mi API Rest
 
-### **Interfaz Swagger u Open API de la API Rest**
+### **d. Interfaz Swagger u Open API de la API Rest**
 
 https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
 

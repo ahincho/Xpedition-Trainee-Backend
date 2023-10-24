@@ -1,14 +1,18 @@
-# Xpedition Trainee - Backend Developer Challenge
+# **Xpedition Trainee - Backend Developer Challenge**
 
-## 1. Descripción del Reto para Backend
+## **1. Descripción del Reto para Backend**
 
 En mi empresa, se ha establecido un estándar de colores para su uso en diversos productos, como sitios web, nuevos diseños, materiales impresos y redes sociales. Con el objetivo de facilitar el acceso a estos colores para otros departamentos y diseñadores, se me ha asignado la tarea de desarrollar una API que proporcionará acceso a esta paleta de colores. Mi compañera se encargará de crear el Frontend para interactuar con esta API.
 
-## 2. Breve Introducción a la Aplicación
+## **2. Breve Introducción a la Aplicación**
 
-He desarrollado una API Rest utilizando tecnologías como el Lenguaje de Programación Java y su Framework Spring Boot 	
+Spring Boot Colors API Rest proporciona acceso a una paleta de colores estandarizada para diversos propósitos, desde diseño web hasta materiales impresos. Está construida en Java 17 y Spring Boot, respaldada por una base de datos MySQL. La documentación utiliza Swagger y Open API, y la aplicación se ejecuta en Docker. El código fuente y las imágenes de Docker se alojan en GitHub y Docker Hub.
 
-## 3. Listado de Tecnologías y Frameworks Utilizados
+Para probar y consumir la API, se recomienda Postman. La aplicación también se despliega en Clever Cloud y Render para su uso en la nube o producción. Cumple con requisitos esenciales, incluyendo operaciones CRUD, paginación, validación de campos y ofrece una amplia documentación.
+
+En resumen, esta aplicación ofrece una solución completa y versátil para la gestión de una paleta de colores, respaldada por tecnologías modernas y opciones de despliegue en la nube.
+
+## **3. Listado de Tecnologías y Frameworks Utilizados**
 
 ### **a. Java 17**
 

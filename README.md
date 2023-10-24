@@ -2,11 +2,11 @@
 
 ## 1. Descripción del Reto para Backend
 
-En mi empresa, se ha establecido un estándar de colores para su uso en diversos productos, como sitios web, nuevos diseños, materiales impresos y redes sociales. Con el objetivo de facilitar el acceso a estos colores para otros departamentos y diseñadores, se me ha asignado la tarea de desarrollar una API que proporcionará acceso a esta paleta de colores. Mi compañera se encargará de crear la interfaz de usuario (Frontend) para interactuar con esta API.
+En mi empresa, se ha establecido un estándar de colores para su uso en diversos productos, como sitios web, nuevos diseños, materiales impresos y redes sociales. Con el objetivo de facilitar el acceso a estos colores para otros departamentos y diseñadores, se me ha asignado la tarea de desarrollar una API que proporcionará acceso a esta paleta de colores. Mi compañera se encargará de crear el Frontend para interactuar con esta API.
 
 ## 2. Breve Introducción a la Aplicación
 
-- 
+He desarrollado una API Rest utilizando tecnologías como el Lenguaje de Programación Java y su Framework Spring Boot 	
 
 ## 3. Listado de Tecnologías y Frameworks Utilizados
 
@@ -39,6 +39,19 @@ En mi empresa, se ha establecido un estándar de colores para su uso en diversos
 - A
 
 ## 5. Enlace (URL) al Ambiente del Producción
+
+Estoy utilizando servicios de hosting gratuitos como Clever Cloud y Render para poder desplegar mi aplicación o API Rest en la nube.
+
+Algo que tengo que dejar en claro es que estos servicios al ser gratuitos tienen un control sobre la actividad de los usuarios, es decir, si nadie realizar peticiones el servidor se apagará automaticamente.
+
+Para volver a reiniciar o encender el servicio debemos realizar algunas peticiones desde Postman o un Navegador Web. Lo que recomiendo es utilizar Postman y enviar una solicitud GET al endpoint de listado de colores.
+
+Sin ningún otro alcance, comparto las URLs de mi Ambiente de Producción en Render y Base de Datos MySQL en Clever Cloud.
+
+- **Servidor en Render**: https://xpedition-trainee-backend.onrender.com/
+- **Puerto o Path de la API Rest**: https://xpedition-trainee-backend.onrender.com/api/colors (Usarlo desde Postman, normalmente devuelve el listado de colores paginado)
+- **Documentación la API Rest**: https://xpedition-trainee-backend.onrender.com/v3/api-docs (Recomiendo abrirlo desde Mozilla Firefox u Opera. En su defecto, instalar una extensión que formatee el archivo JSON con la documentación de mi API Rest)
+- **Swagger y Open API de la API Rest**: https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html (Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expongo todos mis métodos, formatos y retornos de mi API Rest usando el estándar Open API)
 
 ## 6. Instrucciones de Como Poblar la Base de Datos del Ambiente de Desarrollo
 

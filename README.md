@@ -12,6 +12,11 @@ Para probar y consumir la API, se recomienda Postman. La aplicación también se
 
 En resumen, esta aplicación ofrece una solución completa y versátil para la gestión de una paleta de colores, respaldada por tecnologías modernas y opciones de despliegue en la nube.
 
+- Repositorio en Git Hub: https://github.com/ahincho/Xpedition-Trainee-Backend
+- Repositorio en Docker Hub: https://hub.docker.com/r/ahincho/springboot-colors
+- API Rest en la Nube usando Clever Cloud y Render: https://xpedition-trainee-backend.onrender.com/api/colors
+- Documentación e Interfaz de la API Rest usando Swagger y Open API: https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
+
 ## **3. Listado de Tecnologías y Frameworks Utilizados**
 
 ### **a. Java 17**

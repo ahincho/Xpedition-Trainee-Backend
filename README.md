@@ -196,7 +196,43 @@ https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
 
 Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expongo todos mis métodos, formatos y retornos de mi API Rest usando el estándar Open API
 
-## 9. Revisión Rápida de los Puntos a Evaluar
+## **9. Puntos a Evaluar del Reto - Revisión Rápida**
+
+### **a. Organización, Estructuración del Código y Algoritmia**
+
+Tengo experiencia en arquitectura de software y siempre me ha gustado desarrollar mis proyectos utilizando la Arquitecura Hexagonal donde todos mis componentes del proyectos son abstraidos a tres capas principales: Dominio, Aplicación e Infraestructura.
+
+A partir de estas capas empiezo a desarrollar mi código, donde la Capa de Dominio contiene todas las entidades que van a participar en mi casuistica. La Capa de Aplicaciones contiene tanto los servicios y otras utilidades de comunicación o recursos que necesite mi aplicación.
+
+Finalmente la Capa de Infraestructura es donde expongo mis servicios a través de controladores rest y configuro el comportamiento en general y de alto nivel de mi aplicación o proyecto. Cabe mencionar que uso patrones como la Inversión de Independencias, Segregación de Interfaces, etc.
+
+### **b. Implementación y Estándar API**
+
+Para ello he utilizado Java y Spring Boot. De esta manera pude construir de manera rápida y robusta mi API Rest. Además que controlo tanto la validación de las entidades que recibo y envio usando patrones como Bean Validators y Data Transfer Objects (DTOs). Otro patrón más que uso es Open API que es apoyado por Google para exponer mis servicios web a las personas o usuarios.
+
+### **c. Patrones de Diseño**
+
+Como he mencionado ya anteriormente, principalmente he utilizado la Arquitectura Hexagonal y el estándar Open API para poder implementar mi API Rest. También he utilizado archivos centralizados de configuración para la parte de deployment (CI/CD) y de esta manera poder facilitar el mantenimiento y puesta en marcha.
+
+### **d. Documentación**
+
+La documentación que he generado en el proyecto va desde mis comentarios, commits en el repositorio de código fuente en Git Hub, imagenes en Docker Hub, colecciones en Postman para testear la API Rest y el estándar Open API.
+
+### **e. Bases de Datos y SQL**
+
+He utilizado la Base de Datos MySQL debido a su soporte de parte de Oracle y su robustez. También que cuenta con una comunidad activa y amplia. Utilice sentencias SQL para crear los esquemas (schemas), tablas (tables) y registros (records) en la base de datos en MySQL que se evidencia en los archivos 'init.sql' e 'import.sql'.
+
+### **f. Uso del Framework**
+
+Estoy utilizando el framework de Spring Boot el cual es la extensión de Spring Core (Spring) y utiliza patrones como la Inversión de Dependencias, Configuración Centralizada usando archivo .yml o .properties. Además utilizo anotaciones para crear componentes como controladores rest, repositorios de datos, servicios, handlers de errores, etc.
+
+### **g. Programación Orientada a Objetos**
+
+En la Capa de Dominio 'src/main/java/com/trainee/colors/domain' se puede evidenciar como utilizo la Programación Orientada a Objetos para poder identificar entidades y su comportamiento. Finalmente escalo dicho compartamiento a través de la inversión para poder tener un código escalable, mantenible y agradable a la vista.
+
+### **h. Descripción del Proyecto**
+
+Durante todo este archivo 'README.md' he tratado de documentar de la mejor manera todo mi trabajo y proyecto que he desarrollado durante estos 3 días del Reto Backend Developer. Esto se me hace agradable ya que de manera ligera utilizando un archivo de texto puedo llegar a generar un documento con títulos, encabezados, apartados, etc. Considero que he expuesto todos los puntos que se solicitaron para el Trainee Backend Challenge en su totalidad.
 
 ## 10. Puntos Extras del Reto - Revisión Rápida
 

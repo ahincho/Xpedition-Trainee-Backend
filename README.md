@@ -48,10 +48,29 @@ Para volver a reiniciar o encender el servicio debemos realizar algunas peticion
 
 Sin ningún otro alcance, comparto las URLs de mi Ambiente de Producción en Render y Base de Datos MySQL en Clever Cloud.
 
-- **Servidor en Render**: https://xpedition-trainee-backend.onrender.com/
-- **Puerto o Path de la API Rest**: https://xpedition-trainee-backend.onrender.com/api/colors (Usarlo desde Postman, normalmente devuelve el listado de colores paginado)
-- **Documentación la API Rest**: https://xpedition-trainee-backend.onrender.com/v3/api-docs (Recomiendo abrirlo desde Mozilla Firefox u Opera. En su defecto, instalar una extensión que formatee el archivo JSON con la documentación de mi API Rest)
-- **Swagger y Open API de la API Rest**: https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html (Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expongo todos mis métodos, formatos y retornos de mi API Rest usando el estándar Open API)
+### **Servidor en Render**
+
+https://xpedition-trainee-backend.onrender.com
+
+A veces está caído o inoperativo ya que es un servidor gratuito que se apaga cuando nadie lo utiliza y vuelve a iniciarse cuando recibe algunas solicitudes desde Postman o Navegador
+
+### **Puerto o Path de la API Rest**
+
+https://xpedition-trainee-backend.onrender.com/api/colors
+
+Usarlo desde Postman, por defecto devuelve el listado de colores paginado. Se puede acceder a los demás métodos o funcionalidades agregando IDs de los colores o cambiando el tipo de método HTTP
+
+### **Documentación la API Rest**
+
+https://xpedition-trainee-backend.onrender.com/v3/api-docs
+
+Recomiendo abrirlo desde Mozilla Firefox u Opera. En su defecto, instalar una extensión que formatee el archivo JSON con la documentación de mi API Rest
+
+### **Swagger y Open API de la API Rest**
+
+https://xpedition-trainee-backend.onrender.com/swagger-ui/index.html
+
+Interfaz de Aplicación para las personas interesadas en mi API Rest, aquí expongo todos mis métodos, formatos y retornos de mi API Rest usando el estándar Open API
 
 ## 6. Instrucciones de Como Poblar la Base de Datos del Ambiente de Desarrollo
 

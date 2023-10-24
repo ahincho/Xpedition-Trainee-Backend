@@ -6,7 +6,7 @@ services:
   ### API Rest with Spring Boot
   colors:
     container_name: colors-api
-    image: springboot-colors:1.1
+    image: springboot-colors:1.2
     ports:
       - "8080:8080"
     expose:

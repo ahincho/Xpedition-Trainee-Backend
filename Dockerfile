@@ -6,10 +6,10 @@
 FROM amazoncorretto:17.0.8-alpine
 VOLUME /tmp
 EXPOSE 8080
-ARG JAR_FILE=target/colors-mysql-1.0.jar
+ARG JAR_FILE=target/colors-mysql-1.2.jar
 ADD ${JAR_FILE} colors.jar
 LABEL name="springboot-colors"
 LABEL authors="Angel Hincho"
 LABEL mainteiner="ahincho"
-COPY target/colors-mysql-1.0.jar colors.jar
+COPY target/colors-mysql-1.2.jar colors.jar
 ENTRYPOINT ["java","-jar","/colors.jar"]
